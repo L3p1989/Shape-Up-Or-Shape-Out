@@ -1,0 +1,43 @@
+.create-rectangle {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.create-square {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.create-circle {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.create-triangle {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.shapes-canvas {
+    width: 78%;
+    height: 600px;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+}
+
+.side-bar {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    height: 600px;
+    width: 20%;
+}
