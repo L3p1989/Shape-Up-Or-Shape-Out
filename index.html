@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,36 @@
     <title>Shape Up Or Shape Out</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- 4 input buttons for Rectangle, Square, Circle, Isoceles Right Triangle -->
+    <form class="create-rectangle">
+        Width: <input type="number" class="rectangle-width">
+
+        Height: <input type="number" class="rectangle-height">
+
+        <button type="submit" class="rectangle-btn">Insert Rectangle</button>
+    </form>
+    
+    <form class="create-square">
+        Length: <input type="number" class="square-side">
+        
+        <button type="submit" class="square-btn">Insert Square</button>
+    </form>
+    
+    <form class="create-circle">
+        Radius: <input type="number" class="circle-radius">
+        
+        <button type="submit" class="circle-btn">Insert Circle</button>
+    </form>
+    
+    <form class="create-triangle">
+        Height: <input type="number" class="triangle-height">
+    
+        <button type="submit" class="triangle-btn">Insert Triangle</button>
+    </form>
+    
     <script src="script.js"></script>
 </body>
+
 </html>
