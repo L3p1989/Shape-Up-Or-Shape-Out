@@ -27,17 +27,16 @@
 }
 
 .shapes-canvas {
+    display: flex;
     width: 78%;
     height: 600px;
-    border-style: solid;
-    border-width: 1px;
     float: left;
 }
 
 .side-bar {
-    border-style: solid;
-    border-width: 1px;
     display: inline-block;
     height: 600px;
     width: 20%;
+    color: #28d428;
+    background-color: black;
 }
