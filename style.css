@@ -45,3 +45,9 @@
     color: #28d428;
     background-color: black;
 }
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: red
+}
