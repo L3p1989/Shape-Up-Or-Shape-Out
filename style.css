@@ -31,7 +31,6 @@
 }
 
 .shapes-canvas {
-    display: flex;
     width: 78%;
     height: 600px;
     float: left;
@@ -47,7 +46,10 @@
 }
 
 .square {
+    position: absolute;
     width: 100px;
     height: 100px;
-    background: red
+    background: red;
+    bottom: 564px;
+    left: 8px;
 }
