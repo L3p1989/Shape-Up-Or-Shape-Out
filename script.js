@@ -17,7 +17,11 @@ class Shape {
 };
 
 Shape.prototype.describe = function() {
-    
+    shapeName.textContent = this.element.className;
+        shapeWidth.textContent = parseInt(this.element.style.width);
+        shapeHeight.textContent = parseInt(this.element.style.height);
+        shapeArea.textContent = parseInt(this.element.style.width) * parseInt(this.element.style.height);
+        shapePerim.textContent = parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
 };
 
 class Square extends Shape {
@@ -28,13 +32,6 @@ class Square extends Shape {
         this.element = document.createElement('div');
         this.element.className = 'square';
         this.element.setAttribute('style', "width: " + squareLength + "px; height: " + squareLength + "px; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
-    };
-    describe() {
-        shapeName.textContent = this.element.className;
-        shapeWidth.textContent = parseInt(this.element.style.width);
-        shapeHeight.textContent = parseInt(this.element.style.height);
-        shapeArea.textContent = parseInt(this.element.style.width) * parseInt(this.element.style.height);
-        shapePerim.textContent = parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
     };
 };
 
