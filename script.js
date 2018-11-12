@@ -1,12 +1,17 @@
-const shapeCanvas = document.getElementsByClassName('shapes-canvas')[0]
+const shapeCanvas = document.getElementsByClassName('shapes-canvas')[0];
+const shapeName = document.getElementsByClassName('shape-name')[0];
+const shapeWidth = document.getElementsByClassName('shape-width')[0];
+const shapeHeight = document.getElementsByClassName('shape-height')[0];
+const shapeRadius = document.getElementsByClassName('shape-radius')[0];
+const shapeArea = document.getElementsByClassName('shape-area')[0];
+const shapePerim = document.getElementsByClassName('shape-perimeter')[0];
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
 class Shape {
     constructor() {
-
     }
 };
 
@@ -25,10 +30,12 @@ document.getElementsByClassName('square-btn')[0].addEventListener('click', funct
     let addSquare = function() {
         const squareDiv = new Square();
         shapeCanvas.appendChild(squareDiv.element)
+        squareDiv.element.addEventListener('click', function() {
+            
+        })
     };
     if (document.getElementsByClassName('square-side')[0].value !== '') {
         addSquare();
         document.getElementsByClassName('square-side')[0].value = '';
     } else return alert('There is nothing to add!');
-    
 });
