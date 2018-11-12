@@ -6,13 +6,21 @@ const shapeRadius = document.getElementsByClassName('shape-radius')[0];
 const shapeArea = document.getElementsByClassName('shape-area')[0];
 const shapePerim = document.getElementsByClassName('shape-perimeter')[0];
 
+Array.from(document.getElementsByTagName('form')).forEach(function(element) {
+    element.addEventListener('keypress', function(event) {
+        var key = event.charCode || event.keyCode || 0;     
+        if (key == 13) {
+        event.preventDefault();
+        };
+    });
+});
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 };
 
 class Shape {
     constructor() {
-        
     };
 };
 
@@ -28,7 +36,6 @@ class Square extends Shape {
     constructor () {
         super();
         let squareLength = document.getElementsByClassName('square-side')[0].value;
-        
         this.element = document.createElement('div');
         this.element.className = 'square';
         this.element.setAttribute('style', "width: " + squareLength + "px; height: " + squareLength + "px; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
