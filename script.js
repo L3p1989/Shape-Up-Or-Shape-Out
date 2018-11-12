@@ -15,11 +15,10 @@ class Square extends Shape {
     }
 }
 
-let addSquare = function() {
-    const squareDiv = new Square();
-    document.getElementsByClassName('shapes-canvas')[0].appendChild(squareDiv.element)
-}
-
 document.getElementsByClassName('square-btn')[0].addEventListener('click', function() {
+    let addSquare = function() {
+        const squareDiv = new Square();
+        document.getElementsByClassName('shapes-canvas')[0].appendChild(squareDiv.element)
+    };
     addSquare();
-})
+});
