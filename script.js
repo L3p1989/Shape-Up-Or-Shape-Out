@@ -68,6 +68,21 @@ class Circle extends Shape {
     }
 };
 
+class Triangle extends Shape {
+    constructor () {
+        super();
+        let triheight = document.getElementsByClassName('triangle-height')[0].value;
+        this.element = document.createElement('div');
+        this.element.className = 'triangle';
+        this.element.setAttribute('style', "border-top: " + triheight + "px solid yellow; border-left: " + triheight + "px solid transparent; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
+    };
+    describe() {
+        shapeName.textContent = "shape: " + this.element.className;
+        shapeArea.textContent = "area: " + 0.5 * parseInt(this.element.style.borderTop) * parseInt(this.element.style.borderTop);
+        shapePerim.textContent = "perimeter: " + 2 * parseInt(this.element.style.borderTop) + 1.41421356237 * parseInt(this.element.style.borderTop);
+    }
+};
+
 document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', function() {
     let addRect = function() {
         const rectDiv = new Rectangle();
@@ -98,7 +113,7 @@ document.getElementsByClassName('square-btn')[0].addEventListener('click', funct
 });
 
 document.getElementsByClassName('circle-btn')[0].addEventListener('click', function() {
-    let addSquare = function() {
+    let addCircle = function() {
         const circleDiv = new Circle();
         shapeCanvas.appendChild(circleDiv.element);
         circleDiv.element.addEventListener('click', function() {
@@ -106,7 +121,21 @@ document.getElementsByClassName('circle-btn')[0].addEventListener('click', funct
         });
     };
     if (document.getElementsByClassName('circle-radius')[0].value !== '') {
-        addSquare();
+        addCircle();
         document.getElementsByClassName('circle-radius')[0].value = '';
+    } else return alert('There is nothing to add!');
+});
+
+document.getElementsByClassName('triangle-btn')[0].addEventListener('click', function() {
+    let addTri = function() {
+        const triDiv = new Triangle();
+        shapeCanvas.appendChild(triDiv.element);
+        triDiv.element.addEventListener('click', function() {
+            triDiv.describe();
+        });
+    };
+    if (document.getElementsByClassName('triangle-height')[0].value !== '') {
+        addTri();
+        document.getElementsByClassName('triangle-height')[0].value = '';
     } else return alert('There is nothing to add!');
 });
