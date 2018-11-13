@@ -25,11 +25,11 @@ class Shape {
 };
 
 Shape.prototype.describe = function() {
-    shapeName.textContent = this.element.className;
-        shapeWidth.textContent = parseInt(this.element.style.width);
-        shapeHeight.textContent = parseInt(this.element.style.height);
-        shapeArea.textContent = parseInt(this.element.style.width) * parseInt(this.element.style.height);
-        shapePerim.textContent = parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
+        shapeName.textContent = "shape: " + this.element.className;
+        shapeWidth.textContent = "width: " + parseInt(this.element.style.width);
+        shapeHeight.textContent = "height: " + parseInt(this.element.style.height);
+        shapeArea.textContent = "area: " + parseInt(this.element.style.width) * parseInt(this.element.style.height);
+        shapePerim.textContent = "perimeter: " + parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
 };
 
 class Rectangle extends Shape {
@@ -61,6 +61,11 @@ class Circle extends Shape {
         this.element.className = 'circle';
         this.element.setAttribute('style', "border-radius: " + circleRadius + "%; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
     };
+    describe() {
+        shapeName.textContent = "shape: " + this.element.className;
+        shapeRadius.textContent = "radius: " + parseInt(this.element.style.borderRadius);
+        shapePerim.textContent = "perimeter: " + 2 * 3.14 * parseInt(this.element.style.borderRadius);
+    }
 };
 
 document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', function() {
