@@ -32,6 +32,17 @@ Shape.prototype.describe = function() {
         shapePerim.textContent = parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
 };
 
+class Rectangle extends Shape {
+    constructor () {
+        super();
+        let rectLength = document.getElementsByClassName('rectangle-width')[0].value;
+        let rectHeight = document.getElementsByClassName('rectangle-height')[0].value;
+        this.element = document.createElement('div');
+        this.element.className = 'rectangle';
+        this.element.setAttribute('style', "width: " + rectLength + "px; height: " + rectHeight + "px; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
+    };
+};
+
 class Square extends Shape {
     constructor () {
         super();
@@ -41,6 +52,21 @@ class Square extends Shape {
         this.element.setAttribute('style', "width: " + squareLength + "px; height: " + squareLength + "px; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
     };
 };
+
+document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', function() {
+    let addRect = function() {
+        const rectDiv = new Rectangle();
+        shapeCanvas.appendChild(rectDiv.element);
+        rectDiv.element.addEventListener('click', function() {
+            rectDiv.describe();
+        });
+    };
+    if (document.getElementsByClassName('rectangle-width')[0].value !== '' && document.getElementsByClassName('rectangle-height').value !== '') {
+        addRect();
+        document.getElementsByClassName('rectangle-width')[0].value = '';
+        document.getElementsByClassName('rectangle-height')[0].value = '';
+    } else return alert('There is nothing to add!');
+});
 
 document.getElementsByClassName('square-btn')[0].addEventListener('click', function() {
     let addSquare = function() {
