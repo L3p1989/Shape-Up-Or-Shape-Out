@@ -13,11 +13,11 @@ Array.from(document.getElementsByTagName('form')).forEach(function(element) {
         event.preventDefault();
         };
     });
-});
+});//creates an array from 'form' elements and prevents default on 'ENTER' keypress
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
-};
+};//random number
 
 class Shape {
     constructor() {
@@ -30,7 +30,7 @@ Shape.prototype.describe = function() {
         shapeHeight.textContent = "height: " + parseInt(this.element.style.height);
         shapeArea.textContent = "area: " + parseInt(this.element.style.width) * parseInt(this.element.style.height);
         shapePerim.textContent = "perimeter: " + parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
-};
+};//function to change `.side-bar`
 
 class Rectangle extends Shape {
     constructor () {
@@ -65,7 +65,7 @@ class Circle extends Shape {
         shapeName.textContent = "shape: " + this.element.className;
         shapeRadius.textContent = "radius: " + parseInt(this.element.style.borderRadius);
         shapePerim.textContent = "perimeter: " + 2 * 3.14 * parseInt(this.element.style.borderRadius);
-    }
+    };
 };
 
 class Triangle extends Shape {
@@ -80,7 +80,7 @@ class Triangle extends Shape {
         shapeName.textContent = "shape: " + this.element.className;
         shapeArea.textContent = "area: " + 0.5 * parseInt(this.element.style.borderTop) * parseInt(this.element.style.borderTop);
         shapePerim.textContent = "perimeter: " + 2 * parseInt(this.element.style.borderTop) + 1.41421356237 * parseInt(this.element.style.borderTop);
-    }
+    };
 };
 
 document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', function() {
@@ -96,7 +96,7 @@ document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', fu
         document.getElementsByClassName('rectangle-width')[0].value = '';
         document.getElementsByClassName('rectangle-height')[0].value = '';
     } else return alert('There is nothing to add!');
-});
+});//adds `click` event to `.rectangle-btn` that adds Rectangle to canvas
 
 document.getElementsByClassName('square-btn')[0].addEventListener('click', function() {
     let addSquare = function() {
@@ -110,7 +110,7 @@ document.getElementsByClassName('square-btn')[0].addEventListener('click', funct
         addSquare();
         document.getElementsByClassName('square-side')[0].value = '';
     } else return alert('There is nothing to add!');
-});
+});//adds `click` event to `.square-btn` that adds `Square` to canvas
 
 document.getElementsByClassName('circle-btn')[0].addEventListener('click', function() {
     let addCircle = function() {
@@ -124,7 +124,7 @@ document.getElementsByClassName('circle-btn')[0].addEventListener('click', funct
         addCircle();
         document.getElementsByClassName('circle-radius')[0].value = '';
     } else return alert('There is nothing to add!');
-});
+});//adds `click` event to `.circle-btn` that adds `Circle` to canvas
 
 document.getElementsByClassName('triangle-btn')[0].addEventListener('click', function() {
     let addTri = function() {
@@ -138,4 +138,4 @@ document.getElementsByClassName('triangle-btn')[0].addEventListener('click', fun
         addTri();
         document.getElementsByClassName('triangle-height')[0].value = '';
     } else return alert('There is nothing to add!');
-});
+});//adds `click` event to `.triangle-btn` that adds `Triangle` to canvas
