@@ -53,6 +53,16 @@ class Square extends Shape {
     };
 };
 
+class Circle extends Shape {
+    constructor () {
+        super();
+        let circleRadius = document.getElementsByClassName('circle-radius')[0].value;
+        this.element = document.createElement('div');
+        this.element.className = 'circle';
+        this.element.setAttribute('style', "border-radius: " + circleRadius + "%; bottom: " + getRndInteger(124, 564) + "px; left: " + getRndInteger(8, 1045) + "px");
+    };
+};
+
 document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', function() {
     let addRect = function() {
         const rectDiv = new Rectangle();
@@ -79,5 +89,19 @@ document.getElementsByClassName('square-btn')[0].addEventListener('click', funct
     if (document.getElementsByClassName('square-side')[0].value !== '') {
         addSquare();
         document.getElementsByClassName('square-side')[0].value = '';
+    } else return alert('There is nothing to add!');
+});
+
+document.getElementsByClassName('circle-btn')[0].addEventListener('click', function() {
+    let addSquare = function() {
+        const circleDiv = new Circle();
+        shapeCanvas.appendChild(circleDiv.element);
+        circleDiv.element.addEventListener('click', function() {
+            circleDiv.describe();
+        });
+    };
+    if (document.getElementsByClassName('circle-radius')[0].value !== '') {
+        addSquare();
+        document.getElementsByClassName('circle-radius')[0].value = '';
     } else return alert('There is nothing to add!');
 });
