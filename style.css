@@ -58,6 +58,8 @@
 .circle {
     position: absolute;
     background: purple;
+    width: 100px;
+    height: 100px;
 }
 
 .triangle {
