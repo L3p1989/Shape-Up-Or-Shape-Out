@@ -35,6 +35,7 @@
     height: 600px;
     float: left;
     background-color: #d3d3d336;
+    position: relative;
 }
 
 .side-bar {
@@ -46,23 +47,23 @@
 }
 
 .square {
-    position: absolute;
+    position: sticky;
     background: red;
 }
 
 .rectangle {
-    position: absolute;
+    position: sticky;
     background: green;
 }
 
 .circle {
-    position: absolute;
+    position: sticky;
     background: purple;
     width: 100px;
     height: 100px;
 }
 
 .triangle {
-    position: absolute;
+    position: sticky;
     background: yellow;
 }
