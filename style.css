@@ -65,5 +65,6 @@
 
 .triangle {
     position: sticky;
-    background: yellow;
+    width: 0;
+    height: 0;
 }
