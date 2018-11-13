@@ -49,3 +49,18 @@
     position: absolute;
     background: red;
 }
+
+.rectangle {
+    position: absolute;
+    background: green;
+}
+
+.circle {
+    position: absolute;
+    background: purple;
+}
+
+.triangle {
+    position: absolute;
+    background: yellow;
+}
