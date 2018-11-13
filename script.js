@@ -28,8 +28,8 @@ Shape.prototype.describe = function() {
         shapeName.textContent = "shape: " + this.element.className;
         shapeWidth.textContent = "width: " + parseInt(this.element.style.width);
         shapeHeight.textContent = "height: " + parseInt(this.element.style.height);
-        shapeArea.textContent = "area: " + parseInt(this.element.style.width) * parseInt(this.element.style.height);
-        shapePerim.textContent = "perimeter: " + parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2;
+        shapeArea.textContent = "area: " + (parseInt(this.element.style.width) * parseInt(this.element.style.height));
+        shapePerim.textContent = "perimeter: " + (parseInt(this.element.style.width) * 2 + parseInt(this.element.style.height) * 2);
 };//function to change `.side-bar`
 
 class Rectangle extends Shape {
@@ -64,7 +64,7 @@ class Circle extends Shape {
     describe() {
         shapeName.textContent = "shape: " + this.element.className;
         shapeRadius.textContent = "radius: " + parseInt(this.element.style.borderRadius);
-        shapePerim.textContent = "perimeter: " + 2 * 3.14 * parseInt(this.element.style.borderRadius);
+        shapePerim.textContent = "perimeter: " + (2 * 3.14 * parseInt(this.element.style.borderRadius));
     };
 };
 
@@ -78,8 +78,8 @@ class Triangle extends Shape {
     };
     describe() {
         shapeName.textContent = "shape: " + this.element.className;
-        shapeArea.textContent = "area: " + 0.5 * parseInt(this.element.style.borderTop) * parseInt(this.element.style.borderTop);
-        shapePerim.textContent = "perimeter: " + 2 * parseInt(this.element.style.borderTop) + 1.41421356237 * parseInt(this.element.style.borderTop);
+        shapeArea.textContent = "area: " + (0.5 * parseInt(this.element.style.borderTop) * parseInt(this.element.style.borderTop));
+        shapePerim.textContent = "perimeter: " + (2 * parseInt(this.element.style.borderTop) + 1.41421356237 * parseInt(this.element.style.borderTop));
     };
 };
 
