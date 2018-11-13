@@ -89,7 +89,10 @@ document.getElementsByClassName('rectangle-btn')[0].addEventListener('click', fu
         shapeCanvas.appendChild(rectDiv.element);
         rectDiv.element.addEventListener('click', function() {
             rectDiv.describe();
-        });
+        });//updates `side-bar` info on 'click'
+        rectDiv.element.addEventListener('dblclick', function() {
+            this.remove(rectDiv.event);
+        });//removes rectDiv on 'dblclick'
     };
     if (document.getElementsByClassName('rectangle-width')[0].value !== '' && document.getElementsByClassName('rectangle-height').value !== '') {
         addRect();
@@ -104,7 +107,10 @@ document.getElementsByClassName('square-btn')[0].addEventListener('click', funct
         shapeCanvas.appendChild(squareDiv.element);
         squareDiv.element.addEventListener('click', function() {
             squareDiv.describe();
-        });
+        });//updates `side-bar` info on 'click'
+        squareDiv.element.addEventListener('dblclick', function() {
+            this.remove(squareDiv.event);
+        });//removes `squareDiv` on 'dblclick'
     };
     if (document.getElementsByClassName('square-side')[0].value !== '') {
         addSquare();
@@ -118,7 +124,10 @@ document.getElementsByClassName('circle-btn')[0].addEventListener('click', funct
         shapeCanvas.appendChild(circleDiv.element);
         circleDiv.element.addEventListener('click', function() {
             circleDiv.describe();
-        });
+        });//updates `side-bar` info on 'click
+        circleDiv.element.addEventListener('dblclick', function() {
+            this.remove(circleDiv.event);
+        });//removes `circleDiv` on 'dblclick'
     };
     if (document.getElementsByClassName('circle-radius')[0].value !== '') {
         addCircle();
@@ -132,7 +141,10 @@ document.getElementsByClassName('triangle-btn')[0].addEventListener('click', fun
         shapeCanvas.appendChild(triDiv.element);
         triDiv.element.addEventListener('click', function() {
             triDiv.describe();
-        });
+        });//updates `side-bar` info on 'click'
+        triDiv.element.addEventListener('dblclick', function() {
+            this.remove(triDiv.event);
+        });//removes `triDiv` on 'dblclick'
     };
     if (document.getElementsByClassName('triangle-height')[0].value !== '') {
         addTri();
