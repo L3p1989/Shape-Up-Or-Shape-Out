@@ -1,70 +1,70 @@
 .create-rectangle {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    color: #8e430e;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  color: #8e430e;
 }
 
 .create-square {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    color: #8e430e;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: #8e430e;
 }
 
 .create-circle {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    color: #8e430e;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: #8e430e;
 }
 
 .create-triangle {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    color: #8e430e;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: #8e430e;
 }
 
 .shapes-canvas {
-    width: 78%;
-    height: 600px;
-    float: left;
-    background-color: #d3d3d336;
-    position: relative;
+  width: 78%;
+  height: 600px;
+  float: left;
+  background-color: #d3d3d336;
+  position: relative;
 }
 
 .side-bar {
-    display: inline-block;
-    height: 600px;
-    width: 20%;
-    color: #28d428;
-    background-color: black;
+  display: inline-block;
+  height: 600px;
+  width: 20%;
+  color: #28d428;
+  background-color: black;
 }
 
 .square {
-    position: sticky;
-    background: red;
+  position: sticky;
+  background: red;
 }
 
 .rectangle {
-    position: sticky;
-    background: green;
+  position: sticky;
+  background: green;
 }
 
 .circle {
-    position: sticky;
-    background: purple;
-    width: 100px;
-    height: 100px;
+  position: sticky;
+  background: purple;
+  width: 100px;
+  height: 100px;
 }
 
 .triangle {
-    position: sticky;
-    width: 0;
-    height: 0;
+  position: sticky;
+  width: 0;
+  height: 0;
 }
